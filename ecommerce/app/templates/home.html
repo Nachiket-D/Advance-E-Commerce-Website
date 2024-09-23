@@ -1,0 +1,21 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | E-Commerce{% endblock %}
+
+{% block content %}
+    <h1>Welcome to our E-Commerce Store!</h1>
+
+    <h2>Latest Products</h2>
+    <div class="product-grid">
+        {% for product in products %}
+            <div class="product-card">
+                <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.cost }}</p>
+                <a href="{% url 'product_detail' product.id %}">View Details</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

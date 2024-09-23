@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Andy",
+        "email": "andy@gmail.com",
+        "password": "Andy@123",
+        "product_id": [
+            2,
+            4,
+            7,
+            8,
+            12
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Nade",
+        "email": "nade@gmail.com",
+        "password": "Nade@123",
+        "product_id": []
+    }
+]

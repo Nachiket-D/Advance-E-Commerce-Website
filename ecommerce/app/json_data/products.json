@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Summer T-Shirt",
+        "details": "A comfortable summer t-shirt.",
+        "image_name": "product-1.jpg",
+        "cost": "$20"
+    },
+    {
+        "id": 2,
+        "name": "Stylish Black Shoes",
+        "details": "Elegant black shoes for any occasion.",
+        "image_name": "product-2.jpg",
+        "cost": "$50"
+    },
+    {
+        "id": 3,
+        "name": "Classic Gray Trousers",
+        "details": "Versatile gray trousers for casual or formal wear.",
+        "image_name": "product-3.jpg",
+        "cost": "$25"
+    },
+    {
+        "id": 4,
+        "name": "Puma Summer T-Shirt",
+        "details": "A stylish Puma t-shirt for summer outings.",
+        "image_name": "product-4.jpg",
+        "cost": "$30"
+    },
+    {
+        "id": 5,
+        "name": "Gray Sports Shoes",
+        "details": "Comfortable gray sports shoes for your active lifestyle.",
+        "image_name": "product-5.jpg",
+        "cost": "$60"
+    },
+    {
+        "id": 6,
+        "name": "Puma Black T-Shirt",
+        "details": "Trendy Puma black t-shirt for everyday wear.",
+        "image_name": "product-6.jpg",
+        "cost": "$35"
+    },
+    {
+        "id": 7,
+        "name": "3 Pairs of HRX Socks",
+        "details": "Comfortable and stylish HRX socks.",
+        "image_name": "product-7.jpg",
+        "cost": "$15"
+    },
+    {
+        "id": 8,
+        "name": "Fossil Watch",
+        "details": "A stylish watch from Fossil, perfect for any outfit.",
+        "image_name": "product-8.jpg",
+        "cost": "$65"
+    },
+    {
+        "id": 9,
+        "name": "Roadster Watch",
+        "details": "A trendy watch from Roadster.",
+        "image_name": "product-9.jpg",
+        "cost": "$50"
+    },
+    {
+        "id": 10,
+        "name": "Black Sports Shoes",
+        "details": "Durable black sports shoes for everyday use.",
+        "image_name": "product-10.jpg",
+        "cost": "$45"
+    },
+    {
+        "id": 11,
+        "name": "Stylish Gray Shoes",
+        "details": "Comfortable gray shoes for casual outings.",
+        "image_name": "product-11.jpg",
+        "cost": "$40"
+    },
+    {
+        "id": 12,
+        "name": "Black Track Pants",
+        "details": "Comfortable black track pants for workouts.",
+        "image_name": "product-12.jpg",
+        "cost": "$25"
+    }
+]

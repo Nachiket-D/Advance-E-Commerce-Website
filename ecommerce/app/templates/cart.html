@@ -1,0 +1,25 @@
+<!-- templates/cart.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cart | E-Commerce{% endblock %}
+
+{% block content %}
+    <h1>Your Cart</h1>
+
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
+                    <p>{{ product.name }} - {{ product.cost }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <h3>Total: ${{ total }}</h3>
+        <a href="#">Proceed to Checkout</a>
+    {% else %}
+        <p>Your cart is empty. <a href="{% url 'products' %}">Start shopping</a></p>
+    {% endif %}
+{% endblock %}
