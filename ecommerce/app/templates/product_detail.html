@@ -2,13 +2,45 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}{{ product.name }} | E-Commerce{% endblock %}
+{% block title %}{{ product.name }} | RedStore | Ecommerce Website Design{% endblock %}
 
 {% block content %}
-    <h1>{{ product.name }}</h1>
-    <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
-    <p>{{ product.details }}</p>
-    <p><strong>Price:</strong> {{ product.cost }}</p>
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
+        </div>
+        <div class="col-2">
+            <h1>{{ product.name }}</h1>
+            <h4>{{ product.cost }}</h4>
+            <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                {% csrf_token %}
+                <input type="number" name="quantity" value="1" min="1">
+                <button type="submit" class="page-btn">Add to Cart</button>
+            </form>
+            <h3>Product Details <i class="fa fa-indent"></i></h3><br>
+            <p>{{ product.details }}</p><br>
+            <ul><p>100% original product.</p></ul>
+            <ul><p>Cash on Dilivary is available on this product.</p></ul>
+            <ul><p>Easy return and exchange poilcy with in 7 Days</p></ul>
+        </div>
+    </div>
+</div>
+<div class="small-container">
+    <h2 class="title">Related Products</h2>
+    <div class="row">
+        {% for similar_product in similar_products %}
+            <div class="col-4">
+                <a href="{% url 'product_detail' similar_product.id %}">
+                <img src="{% static 'images/' %}{{ similar_product.image_name }}" alt="{{ similar_product.name }}">
+                <h3>{{ similar_product.name }}</h3>
+                <p>{{ similar_product.cost }}</p></a>
+            </div>
+            {% if forloop.counter|divisibleby:4 and not forloop.last %}
+                </div><div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
 
-    <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
 {% endblock %}

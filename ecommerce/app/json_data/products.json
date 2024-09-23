@@ -2,84 +2,96 @@
     {
         "id": 1,
         "name": "Summer T-Shirt",
-        "details": "A comfortable summer t-shirt.",
+        "details": "This summer t-shirt is designed for comfort during warm weather. Made from soft, breathable fabric, it's perfect for casual outings or relaxing at home.",
+        "type":"t-shirt",
         "image_name": "product-1.jpg",
         "cost": "$20"
     },
     {
         "id": 2,
         "name": "Stylish Black Shoes",
-        "details": "Elegant black shoes for any occasion.",
+        "details": "These stylish black shoes offer a touch of elegance for any occasion. Their sleek design ensures you can pair them with both formal and casual outfits.",
+        "type":"shoes",
         "image_name": "product-2.jpg",
         "cost": "$50"
     },
     {
         "id": 3,
         "name": "Classic Gray Trousers",
-        "details": "Versatile gray trousers for casual or formal wear.",
+        "details": "Versatile and timeless, these gray trousers can be dressed up for formal occasions or kept casual. They provide a comfortable fit with a modern design.",
+        "type":"pant",
         "image_name": "product-3.jpg",
         "cost": "$25"
     },
     {
         "id": 4,
         "name": "Puma Summer T-Shirt",
-        "details": "A stylish Puma t-shirt for summer outings.",
+        "details": "This Puma t-shirt is perfect for summer outings. It's crafted from lightweight, breathable material that keeps you cool and stylish in warm weather.",
+        "type":"t-shirt",
         "image_name": "product-4.jpg",
         "cost": "$30"
     },
     {
         "id": 5,
         "name": "Gray Sports Shoes",
-        "details": "Comfortable gray sports shoes for your active lifestyle.",
+        "details": "Designed for an active lifestyle, these gray sports shoes offer comfort and durability. Whether you're working out or running errands, these shoes have you covered.",
+        "type":"shoes",
         "image_name": "product-5.jpg",
         "cost": "$60"
     },
     {
         "id": 6,
         "name": "Puma Black T-Shirt",
-        "details": "Trendy Puma black t-shirt for everyday wear.",
+        "details": "Stay trendy with this Puma black t-shirt, ideal for everyday wear. Its classic design and comfortable fit make it a go-to choice for casual days.",
+        "type":"t-shirt",
         "image_name": "product-6.jpg",
         "cost": "$35"
     },
     {
         "id": 7,
         "name": "3 Pairs of HRX Socks",
-        "details": "Comfortable and stylish HRX socks.",
+        "details": "These HRX socks provide both style and comfort. Available in a set of three pairs, they are perfect for everyday use, whether you're at the gym or lounging around.",
+        "type":"sock",
         "image_name": "product-7.jpg",
         "cost": "$15"
     },
     {
         "id": 8,
         "name": "Fossil Watch",
-        "details": "A stylish watch from Fossil, perfect for any outfit.",
+        "details": "This Fossil watch adds a stylish touch to any outfit. Its classic design ensures it pairs well with both casual and formal attire, making it a versatile accessory.",
+        "type":"watch",
         "image_name": "product-8.jpg",
         "cost": "$65"
     },
     {
         "id": 9,
         "name": "Roadster Watch",
-        "details": "A trendy watch from Roadster.",
+        "details": "With its trendy design, this Roadster watch is ideal for those who love to stay on top of the latest fashion. It's perfect for adding a modern touch to any outfit.",
+        "type":"watch",
         "image_name": "product-9.jpg",
         "cost": "$50"
     },
     {
         "id": 10,
         "name": "Black Sports Shoes",
-        "details": "Durable black sports shoes for everyday use.",
+        "details": "These black sports shoes are built to last. Their durable construction ensures they can handle everyday wear while keeping you comfortable and stylish.",
+        "type":"shoes",
         "image_name": "product-10.jpg",
         "cost": "$45"
     },
     {
         "id": 11,
         "name": "Stylish Gray Shoes",
-        "details": "Comfortable gray shoes for casual outings.",
+        "details": "These stylish gray shoes are perfect for casual outings. They combine comfort with a modern design, making them a great addition to your wardrobe.",
+        "type":"shoes",
         "image_name": "product-11.jpg",
         "cost": "$40"
     },
     {
         "id": 12,
         "name": "Black Track Pants",
-        "details": "Comfortable black track pants for workouts.",
+        "details": "Whether you're working out or relaxing, these black track pants offer comfort and flexibility. Their soft fabric and relaxed fit make them perfect for any activity.",
+        "type":"pant",
         "image_name": "product-12.jpg",
         "cost": "$25"
     }

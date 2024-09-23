@@ -4,12 +4,15 @@
         "name": "Andy",
         "email": "andy@gmail.com",
         "password": "Andy@123",
-        "product_id": [
-            2,
-            4,
-            7,
-            8,
-            12
+        "cart": [
+            {
+                "product_id": 2,
+                "quantity": 3
+            },
+            {
+                "product_id": 5,
+                "quantity": 1
+            }
         ]
     },
     {
@@ -17,6 +20,38 @@
         "name": "Nade",
         "email": "nade@gmail.com",
         "password": "Nade@123",
-        "product_id": []
+        "cart": [
+            {
+                "product_id": 3,
+                "quantity": 1
+            },
+            {
+                "product_id": 6,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "nate",
+        "email": "nate@gmail.com",
+        "password": "Nat@123",
+        "cart": []
+    },
+    {
+        "id": 2,
+        "name": "Nade",
+        "email": "nade@gmail.com",
+        "password": "Nade@123",
+        "cart": [
+            {
+                "product_id": 3,
+                "quantity": 2
+            },
+            {
+                "product_id": 6,
+                "quantity": 1
+            }
+        ]
     }
 ]
