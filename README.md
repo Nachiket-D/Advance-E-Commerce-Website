@@ -1,64 +1,75 @@
-Ecommerce Website
+# E-commerce Website
 
-An ecommerce website built using Django, which allows users to register, log in, browse products, add items to the cart, and view similar products. The website also includes a contact page and features like unique user registration and cart management.
-Features
+An e-commerce website built using Django, which allows users to register, log in, browse products, add items to the cart, and view similar products. The website also includes a contact page and features like unique user registration and cart management.
 
-    User Registration and Login
-    Browse Products
-    Product Search Functionality
-    View Product Details
-    Add Products to Cart
-    Cart Management (View products, update quantities, see total cost)
-    Logout and Session Management
-    Contact Us Form with integrated Google Maps
-    View similar products based on product type
+## Features
 
-Technologies Used
+- **User Registration and Login**: Users can create an account and log in to access their cart and manage their profile.
+- **Browse Products**: Users can view the latest and best-selling products available in the store.
+- **Product Search Functionality**: Users can search for products by name or details.
+- **View Product Details**: Users can see detailed information about a specific product, including similar products.
+- **Add Products to Cart**: Users can add selected products to their shopping cart with specified quantities.
+- **Cart Management**: Users can view their cart, update item quantities, and see the total cost of their selected items.
+- **Logout and Session Management**: Users can log out, and their session information is managed securely using Django Sessions.
+- **Contact Us Form**: A contact form that allows users to reach out for inquiries, integrated with Google Maps for location display.
+- **View Similar Products**: Users can view products similar to the one they are currently viewing based on product type.
 
-    Backend: Django (Python)
-    Frontend: HTML, CSS, JavaScript
-    Session Management: Django Sessions
-    Database: Mock functions to handle users and products (can be extended to use an actual database like PostgreSQL or SQLite)
+## Technologies Used
 
-Setup Instructions
-Prerequisites
+- **Backend**: Django (Python)
+- **Frontend**: HTML, CSS, JavaScript
+- **Session Management**: Django Sessions
+- **Database**: Mock functions to handle users and products (can be extended to use an actual database like PostgreSQL or SQLite)
 
-    Python 3.x
-    Django
+## Setup Instructions
 
-1. Clone the Repository
+### Prerequisites
 
-bash
+- Python 3.x
+- Django
 
-git clone https://github.com/yourusername/ecommerce-website.git
-cd ecommerce-website
+### Installation Steps
 
-2. Create a Virtual Environment and Activate it
+1. **Clone the Repository**
 
-bash
+   ```
+   git clone https://github.com/Nachiket-D/Advance-E-Commerce-Website.git
+   cd Advance-E-Commerce-Website/ecommerce
+   ```
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. **Create a Virtual Environment and Activate it**
 
-3. Install Dependencies
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-bash
+3. **Install Required Packages**
 
-pip install -r requirements.txt
+   Ensure that Django is installed in your virtual environment:
 
-4. Run the Development Server
+   ```
+   pip install django
+   ```
 
-bash
+4. **Run the Development Server**
 
-python manage.py runserver
+   ```
+   python manage.py runserver
+   ```
 
-The website will be running at http://127.0.0.1:8000/.
-5. Access the Website
+   The website will be running at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
-    Home Page: Browse latest products
-    Login: /login/ - User login page
-    Register: /register/ - User registration page
-    Products: /products/ - View all products
-    Product Details: /products/<product_id>/ - View individual product details and similar products
-    Cart: /cart/ - View and manage cart
-    Contact: /contact/ - Contact form with integrated Google Maps
+5. **Access the Website**
+
+   - **Home Page**: Browse the latest products at `/`.
+   - **Login**: Access the user login page at `/login/`.
+   - **Register**: Create a new user account at `/register/`.
+   - **Products**: View all products at `/products/`.
+   - **Product Details**: View individual product details and similar products at `/products/<product_id>/`.
+   - **Cart**: Manage your cart at `/cart/`.
+   - **Contact**: Reach out through the contact form at `/contact/`.
+
+## Contribution
+
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and create a pull request.
