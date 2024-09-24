@@ -1,0 +1,52 @@
+<!-- templates/cart.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cart | RedStore | Ecommerce Website Design{% endblock %}
+
+{% block content %}
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>SubTotal</th>
+        </tr>
+    {% if products %}
+            {% for product in products %}
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                        <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
+                        <div>
+                            <p>{{ product.name }}</p>
+                            <small>Price : {{ product.cost}}<small>
+                            <a href="">Remove</a>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>{{ product.total_cost }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+    <div class="total-price">
+    <table>
+        <tr>
+            <td>SubTotal</td>
+            <td>{{ total_cost }}</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>$40.00</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+    </div>
+    {% else %}
+    </table>
+    <p>Your cart is empty. <a href="{% url 'products' %}">Start shopping</a></p>
+    {% endif %}
+{% endblock %}
