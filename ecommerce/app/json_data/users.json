@@ -37,21 +37,5 @@
         "email": "nate@gmail.com",
         "password": "Nat@123",
         "cart": []
-    },
-    {
-        "id": 2,
-        "name": "Nade",
-        "email": "nade@gmail.com",
-        "password": "Nade@123",
-        "cart": [
-            {
-                "product_id": 3,
-                "quantity": 2
-            },
-            {
-                "product_id": 6,
-                "quantity": 1
-            }
-        ]
     }
 ]

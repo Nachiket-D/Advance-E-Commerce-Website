@@ -37,9 +37,20 @@ def register_view(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         
+        # Check if the email already exists
+        users = get_users()
+        if any(user['email'] == email for user in users):
+            return render(request, 'register.html', {'error': 'Email already exists'})
+
+        # Generate a unique user ID
+        if users:
+            new_user_id = max(user['id'] for user in users) + 1  # Get the highest user ID and increment it
+        else:
+            new_user_id = 1  # If no users exist, start with ID 1
+        
         # Prepare new user data, starting with an empty cart
         user_data = {
-            'id': len(get_users()) + 1,
+            'id': new_user_id,
             'name': name,
             'email': email,
             'password': password,
