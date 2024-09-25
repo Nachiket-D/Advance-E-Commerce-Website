@@ -1,6 +1,5 @@
 <!-- templates/cart.html -->
 {% extends 'base.html' %}
-{% load static %}
 
 {% block title %}Cart | RedStore | Ecommerce Website Design{% endblock %}
 
@@ -17,7 +16,7 @@
                 <tr>
                     <td>
                         <div class="cart-info">
-                        <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
+                        <img src="{{ url_for('static', filename='images/' + product.image_name) }}" alt="{{ product.name }}">
                         <div>
                             <p>{{ product.name }}</p>
                             <small>Price : {{ product.cost}}<small>
@@ -47,6 +46,6 @@
     </div>
     {% else %}
     </table>
-    <p>Your cart is empty. <a href="{% url 'products' %}">Start shopping</a></p>
+    <p>Your cart is empty. <a href="{{ url_for('products') }}">Start shopping</a></p>
     {% endif %}
 {% endblock %}

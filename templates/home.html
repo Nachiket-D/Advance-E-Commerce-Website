@@ -1,8 +1,7 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}Home | RedStore | Ecommerce Website Design{% endblock %}
+{% block title %}RedStore | Ecommerce Website Design{% endblock %}
 
 {% block content %}
     <!-- Featured Categories --> 
@@ -10,13 +9,13 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
-                    <img src="{% static 'images/category-1.jpg' %}">
+                    <img src="{{ url_for('static', filename='images/category-1.jpg') }}">
                 </div>
                 <div class="col-3">
-                    <img src="{% static 'images/category-2.jpg' %}">
+                    <img src="{{ url_for('static', filename='images/category-2.jpg') }}">
                 </div>
                 <div class="col-3">
-                    <img src="{% static 'images/category-3.jpg' %}">
+                    <img src="{{ url_for('static', filename='images/category-3.jpg') }}">
                 </div>
             </div>
         </div>
@@ -28,8 +27,8 @@
         <div class="row">
             {% for product in products %}
                 <div class="col-4">
-                    <a href="{% url 'product_detail' product.id %}">
-                    <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
+                    <a href="{{ url_for('product_detail', product_id=product.id) }}">
+                    <img src="{{ url_for('static', filename='images/' + product.image_name) }}" alt="{{ product.name }}">
                     <h4>{{ product.name }}</h4>
                     <p>{{ product.cost }}</p></a>
                 </div>
@@ -41,7 +40,7 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-2">
-                    <img src="{% static 'images/exclusive.png' %}" class="offer-img">
+                    <img src="{{ url_for('static', filename='images/exclusive.png') }}" class="offer-img">
                 </div>
                 <div class="col-2">
                     <p>Exclusively Available on RedStore</p>
@@ -61,19 +60,19 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-5">
-                    <img src="{% static 'images/logo-godrej.png' %}">
+                    <img src="{{ url_for('static', filename='images/logo-godrej.png') }}">
                 </div>
                 <div class="col-5">
-                    <img src="{% static 'images/logo-oppo.png' %}">
+                    <img src="{{ url_for('static', filename='images/logo-oppo.png') }}">
                 </div>
                 <div class="col-5">
-                    <img src="{% static 'images/logo-coca-cola.png' %}">
+                    <img src="{{ url_for('static', filename='images/logo-coca-cola.png') }}">
                 </div>
                 <div class="col-5">
-                    <img src="{% static 'images/logo-paypal.png' %}">
+                    <img src="{{ url_for('static', filename='images/logo-paypal.png') }}">
                 </div>
                 <div class="col-5">
-                    <img src="{% static 'images/logo-philips.png' %}">
+                    <img src="{{ url_for('static', filename='images/logo-philips.png') }}">
                 </div>
             </div>
         </div>

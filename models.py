@@ -1,12 +1,9 @@
-from django.db import models
 import json
 import os
 
-from django.conf import settings
-
-# Paths to JSON files
-USERS_FILE = os.path.join(settings.BASE_DIR, 'app/json_data/users.json')
-PRODUCTS_FILE = os.path.join(settings.BASE_DIR, 'app/json_data/products.json')
+# Paths to JSON files (update these paths based on your directory structure)
+USERS_FILE = os.path.join(os.path.dirname(__file__), 'json_data/users.json')
+PRODUCTS_FILE = os.path.join(os.path.dirname(__file__), 'json_data/products.json')
 
 # Load JSON Data
 def load_json(file_path):
@@ -36,15 +33,10 @@ def add_to_cart(user_email, product_id, quantity):
     users = get_users()
     for user in users:
         if user['email'] == user_email:
-            # Check if product is already in cart
             product_in_cart = next((item for item in user['cart'] if item['product_id'] == product_id), None)
             if product_in_cart:
-                # Update quantity if product is already in cart
                 product_in_cart['quantity'] += quantity
             else:
-                # Add new product to cart with quantity
                 user['cart'].append({'product_id': product_id, 'quantity': quantity})
             save_user(user)
             break
-
-

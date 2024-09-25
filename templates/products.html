@@ -1,6 +1,5 @@
 <!-- templates/products.html -->
 {% extends 'base.html' %}
-{% load static %}
 
 {% block title %}Products | RedStore | Ecommerce Website Design{% endblock %}
 
@@ -8,7 +7,7 @@
 <div class="small-container">
     <div class="row row-2">
         <h2>All Products</h2>
-        <form method="GET" action="{% url 'products' %}">
+        <form method="GET" action="{{ url_for('products') }}">
             <input type="text" name="search" value="{{ search }}" placeholder="Search for products...">
             <button type="submit" class="page-btn">Search</button>
         </form>
@@ -17,12 +16,13 @@
     <div class="row">
         {% for product in products %}
             <div class="col-4">
-                <a href="{% url 'product_detail' product.id %}">
-                <img src="{% static 'images/' %}{{ product.image_name }}" alt="{{ product.name }}">
-                <h3>{{ product.name }}</h3>
-                <p>{{ product.cost }}</p></a>
+                <a href="{{ url_for('product_detail', product_id=product.id) }}">
+                    <img src="{{ url_for('static', filename='images/' + product.image_name) }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.cost }}</p>
+                </a>
             </div>
-            {% if forloop.counter|divisibleby:4 and not forloop.last %}
+            {% if loop.index % 4 == 0 and not loop.last %}
                 </div><div class="row">
             {% endif %}
         {% endfor %}
