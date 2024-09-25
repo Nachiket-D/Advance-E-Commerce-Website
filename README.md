@@ -1,6 +1,6 @@
 # E-commerce Website
 
-An e-commerce website built using Django, which allows users to register, log in, browse products, add items to the cart, and view similar products. The website also includes a contact page and features like unique user registration and cart management.
+An e-commerce website built using Flask, which allows users to register, log in, browse products, add items to the cart, and view similar products. The website also includes a contact page with a contact form for user inquiries.
 
 ## Features
 
@@ -10,15 +10,15 @@ An e-commerce website built using Django, which allows users to register, log in
 - **View Product Details**: Users can see detailed information about a specific product, including similar products.
 - **Add Products to Cart**: Users can add selected products to their shopping cart with specified quantities.
 - **Cart Management**: Users can view their cart, update item quantities, and see the total cost of their selected items.
-- **Logout and Session Management**: Users can log out, and their session information is managed securely using Django Sessions.
+- **Logout and Session Management**: Users can log out, and their session information is managed securely.
 - **Contact Us Form**: A contact form that allows users to reach out for inquiries, integrated with Google Maps for location display.
 - **View Similar Products**: Users can view products similar to the one they are currently viewing based on product type.
 
 ## Technologies Used
 
-- **Backend**: Django (Python)
+- **Backend**: Flask (Python)
 - **Frontend**: HTML, CSS, JavaScript
-- **Session Management**: Django Sessions
+- **Session Management**: Flask Sessions
 - **Database**: Mock functions to handle users and products (can be extended to use an actual database like PostgreSQL or SQLite)
 
 ## Setup Instructions
@@ -26,7 +26,7 @@ An e-commerce website built using Django, which allows users to register, log in
 ### Prerequisites
 
 - Python 3.x
-- Django
+- Flask
 
 ### Installation Steps
 
@@ -46,19 +46,19 @@ An e-commerce website built using Django, which allows users to register, log in
 
 3. **Install Required Packages**
 
-   Ensure that Django is installed in your virtual environment:
+   Ensure that Flask is installed in your virtual environment:
 
    ```
-   pip install django
+   pip install Flask
    ```
 
 4. **Run the Development Server**
 
    ```
-   python manage.py runserver
+   python app.py
    ```
 
-   The website will be running at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+   The website will be running at [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
 5. **Access the Website**
 
